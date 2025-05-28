@@ -1,0 +1,413 @@
+/* ===== import font ====== */
+
+@font-face {
+    font-family:"Josefin title";
+    src: url('../fonts/Josefin_Sans/static/JosefinSans-Thin.ttf');
+}
+
+@font-face {
+    font-family:Josefin;
+    src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family:alata;
+    src: url('../fonts/Alata/Alata-Regular.ttf');
+}
+
+
+ /*========== Font and typography ==========*/
+
+:root {
+ --white: hsl(0, 0%, 100%);
+ --black: hsl(0, 0%, 0%);
+ --grey: hsl(0, 0%, 64%);
+
+
+ --biggest-font-size: 2.5rem;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.3rem;
+  --h4--font-size:1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+ /* ============ Font ==================== */
+
+ --title-font:"Josefin title";
+ --second-font: alata, sans-serif;
+ --tertiary-font:Josefin, sans-serif;
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* ============= BASE ============= */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4 {
+    font-weight: var(--font-semi-bold);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding-block: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5;
+}
+
+.section {
+    padding-block: 4rem 3rem;
+}
+
+.section__title{
+    margin-block: 1.2rem;
+    font-size: var(--h1-font-size);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-35{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ========== Header ================= */
+
+.header{
+    background: url('../images/mobile/image-hero.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+
+
+.header .logo{
+    font-size: var(--biggest-font-size);
+    color: var(--white);
+    font-weight: var(--font-semi-bold);
+    font-family: var( --second-font), sans-serif;
+    z-index: 3;
+}
+
+.header-navbar{
+   position: absolute;
+   background: var(--black);
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   visibility: hidden;
+   transition: .5s ease;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.visible .ri-close-line{
+    display: block;
+    z-index: 1111;
+}
+
+.navbar{
+    height: 50%;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: var(--h1-font-size);
+}
+
+.header-navbar a{
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--tertiary-font);
+    font-weight: 300;
+}
+
+.menu{
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 111;
+}
+
+
+
+.header p{
+    color: var(--white);
+    font-weight: 300;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    line-height: 60px;
+    border: solid 1px var(--white);
+    padding: 1rem;
+    font-family: var(--tertiary-font);
+}
+
+/* interactive-vr section */
+
+
+.interactive-vr img{
+    margin-bottom: 3rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.interactive-vr p{
+    font-size: var(--h3-font-size);
+    padding-inline: 1.3rem;
+    text-align: justify;
+    font-weight: 400;
+    font-family: var(--second-font);
+    color: var(--grey);
+}
+
+
+/* CREATION STYLE */
+
+.creations{
+    font-family: var(--tertiary-font);
+    text-transform: uppercase;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.creation-images{
+    display: grid;
+    gap: 1.3rem;
+    justify-items: center;
+    margin-top: 1.4rem;
+}
+
+.creation{
+    position: relative;
+}
+
+.creation::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,.4);
+}
+
+.imageDesktop{
+    display: none;
+}
+
+.creation-images p{
+    top: 3rem;
+    left: 1.5rem;
+    font-size: 1.3rem;
+    position: absolute;
+    color: white;
+    font-weight: 300;
+    z-index: 1;
+    line-height: 23px;
+}
+
+.btn{
+    border: solid var(--black) 2px;
+    background-color: transparent;
+    padding: .89rem 2rem;
+    margin:1rem auto;
+    font-size: var(--h4-font-size);
+    text-transform: uppercase;
+    font-weight:300;
+    font-family: var(--second-font);
+    width: 60%;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: var(--black);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40vh;
+    font-family: var(--tertiary-font);
+    padding-block: 1.5rem;
+}
+
+.nav a{
+    color: white;
+    font-weight: 400;
+    font-size: var(--h3-font-size);
+}
+
+.social-media{
+    justify-content: center;
+    gap: 1.4rem;
+}
+
+.footer-medias p{
+    color: white;
+    font-family: var(--tertiary-font);
+    margin-top: 2rem;
+    color: var(--grey);
+    font-size: var(--h4-font-size);
+}
+
+
+/*  Desktop  */
+
+/* BREAKPOINT */
+
+@media screen and (min-width:1110px){
+    .header{
+        background: url('../images/desktop/image-hero.jpg') center;
+        height: 100vh;
+        background-size: cover;  
+    }
+
+    .header p{
+        width: 50%;
+    }
+
+    .header-navbar{
+        visibility: visible;
+        background-color: transparent;
+        flex-direction: row;
+    }
+
+    .navbar{
+       flex-direction: row;
+       align-items: center;
+       height: 80px ;
+       width: 20%;
+    }
+
+    .navbar a{
+        text-transform: capitalize;
+    }
+
+    .menu{
+        display: none;
+    }
+
+
+  /* interactive-vr section */
+
+  .interactive-vr{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .interactive-vr > div{
+    position: absolute;
+    top: 15rem;
+    left: 28rem;
+    width: 60%;
+    box-shadow: 0 0 0 rgba(0,0,0,.1);
+    background: var(--white);
+    padding: 2rem;
+  }
+
+   /* creations */
+
+   .creations{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .creation-images{
+    order: 1;
+    flex-basis: 100%;
+    grid-template-columns: repeat(4, 1fr);
+   }
+
+   .imageMobile{
+    display: none;
+   }
+
+   .imageDesktop{
+    display: block;
+   }
+   .btn{
+    width: 20%;
+   }
+
+   .creation-images p{
+    top: 23rem;
+   }
+
+   .footer{
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding-inline: 4.5rem;
+    padding-block: 2rem;
+   }
+
+   .footer .nav{
+    height: 0;
+    flex-direction: row;
+    margin-top: .7rem;
+    gap: 1.4rem;
+   }
+}

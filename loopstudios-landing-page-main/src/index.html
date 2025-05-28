@@ -7,6 +7,11 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Style  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Remix css -->
+  <link rel="stylesheet" href="./remix/remixicon.css" />
 
   <title>Frontend Mentor | Loopstudios landing page</title>
 
@@ -26,113 +31,144 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <!-- Nav menu -->
-    <nav class="header-navbar">
-      <a href="#">About</a>
-      <a href="#"> Careers</a>
-      <a href="#">Events</a>
-      <a href="#">Products</a>
-      <a href="#">Support</a>
-    </nav>
+    <div class="container h-35">
 
-    <!-- Banner -->
-    <div class="header-banner">
-      <p class="header-text">
+      <div class="flex justify-between">
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+          <img src="./images/logo.svg" alt="Logo">
+        </a>
+
+        <!-- Nav menu -->
+        <nav class="header-navbar" id="menu">
+          <ul class="navbar">
+              <li><a href="#">About</a></li>
+              <li><a href="#"> Careers</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Support</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu">
+          <span class="ri ri-menu-line" id="mobile-menu"></span>
+          <span class="ri ri-close-line" id="close-menu"></span>
+        </div>
+      </div>
+
+      <p>
         Immersive experiences that deliver
       </p>
-    </div>
 
+    </div>
   </header>
 
   <main>
     <!-- Section interactive vr -->
-    <section class="interactive-vr">
-      <img src="./images/mobile/image-interactive.jpg" alt="leader interactive vr">
-      <h2>The leader in interactive VR</h2>
-      <p>
-        Founded in 2011, Loopstudios has been producing world-class virtual reality
-        projects for some of the best companies around the globe. Our award-winning
-        creations have transformed businesses through digital experiences that bind
-        to their brand.
-      </p>
+    <section class="interactive-vr section container">
+        <img src="./images/mobile/image-interactive.jpg" alt="leader interactive vr">  
+      
+      <div>
+        <h2 class="section__title">The leader in <br> interactive VR</h2>
+        <p>
+          Founded in 2011, Loopstudios has been producing world-class virtual reality
+          projects for some of the best companies around the globe. Our award-winning
+          creations have transformed businesses through digital experiences that bind
+          to their brand.
+        </p>
+      </div>
     </section>
 
     <!-- section our creations -->
-    <section class="creations">
-      <h2>Our creations</h2>
+    <section class="creations container">
+      <h2 class="section__title">Our creations</h2>
 
       <div class="creation-images">
         <article class="creation">
-          <img src="images/mobile/image-deep-earth.jpg" alt="DeepEarth" />
-          <p>Deep earth</p>
+          <img src="images/mobile/image-deep-earth.jpg" alt="DeepEarth" class="imageMobile"/ >
+          <img src="./images/desktop/image-deep-earth.jpg" alt="DeepEarth" class="imageDesktop">
+          <p>Deep <br/> earth</p>
         </article>
 
         <article class="creation">
-          <img src="images/mobile/image-night-arcade.jpg" alt="NightArcade" />
-          <p>Night arcade</p>
+          <img src="images/mobile/image-night-arcade.jpg" alt="NightArcade" class="imageMobile"/ >
+          <img src="./images/desktop/image-night-arcade.jpg" alt="NightArcade" class="imageDesktop">
+          <p>Night <br/> arcade</p>
         </article>
 
         <article class="creation">
-          <img src="images/mobile/image-soccer-team.jpg" alt="SoccerTeam" />
-          <p>Soccer team VR</p>
+          <img src="images/mobile/image-soccer-team.jpg" alt="SoccerTeam" class="imageMobile"/ >
+          <img src="./images/desktop/image-soccer-team.jpg" alt="SoccerTeam" class="imageDesktop">
+          <p>Soccer <br/> team VR</p>
         </article>
 
         <article class="creation">
-          <img src="images/mobile/image-grid.jpg" alt="Grid" />
-          <p>The grid</p>
+          <img src="images/mobile/image-grid.jpg" alt="Grid" class="imageMobile"/>
+          <img src="./images/desktop/image-grid.jpg" alt="Grid" class="imageDesktop">
+          <p>The <br/> grid</p>
         </article>
 
         <article class="creation">
-          <img src="images/mobile/image-from-above.jpg" alt="AboveVr" />
-          <p>From up above VR</p>
+          <img src="images/mobile/image-from-above.jpg" alt="AboveVr" class="imageMobile"/ >
+          <img src="./images/desktop/image-from-above.jpg" alt="AboveVr" class="imageDesktop">
+          <p>From up <br/> above VR</p>
         </article>
 
         <article class="creation">
-          <img src="images/mobile/image-pocket-borealis.jpg" alt="PocketBorealis" />
-          <p>Pocket borealis</p>
+          <img src="images/mobile/image-pocket-borealis.jpg" alt="PocketBorealis" class="imageMobile"/ >
+          <img src="./images/desktop/image-pocket-borealis.jpg" alt="PocketBorealis" class="imageDesktop">
+          <p>Pocket <br/> borealis</p>
         </article>
 
         <article class="creation">
-          <img src="images/mobile/image-curiosity.jpg" alt="Curisity" />
-          <p>The curiosity</p>
+          <img src="images/mobile/image-curiosity.jpg" alt="Curisity" class="imageMobile"/ >
+          <img src="./images/desktop/image-curiosity.jpg" alt="Curisity" class="imageDesktop">
+          <p>The <br/> curiosity</p>
         </article>
 
         <article class="creation">
-          <img src="images/mobile/image-fisheye.jpg" alt="FisheyeImage" />
-          <p>Make it fisheye</p>
+          <img src="images/mobile/image-fisheye.jpg" alt="FisheyeImage" class="imageMobile"/ >
+          <img src="./images/desktop/image-fisheye.jpg" alt="FisheyeImage" class="imageDesktop">
+          <p>Make it <br/> fisheye</p>
         </article>
       </div>
+
       <button class="btn">See all</button>
     </section>
   </main>
 
   <!-- Rodapé -->
   <footer class="footer">
+    <div>
       <img src="./images/logo.svg" alt="">
       <nav class="footer-nav">
-          <ul class="nav">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-      </nav>
+      <ul class="nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    </div>
 
-      <div class="footer-medias">
+    <div class="footer-medias">
+      <div class="flex social-media">
         <a href="#"><img src="./images/icon-facebook.svg" alt="facebookImage"></a>
         <a href="#"><img src="./images/icon-twitter.svg" alt="twitterImage"></a>
         <a href="#"><img src="./images/icon-pinterest.svg" alt="pinterestImage"></a>
         <a href="#"><img src="./images/icon-instagram.svg" alt="InstagramImage"></a>
       </div>
-
       <p>© 2021 Loopstudios. All rights reserved.</p>
-  </footer>
-  
+    </div>
+</footer>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Kelvin Miranda</a>.
-  </div>
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Kelvin Miranda</a>.
+</div> -->
+
+
+<script src="./js/script.js"></script>
 </body>
 </html>
